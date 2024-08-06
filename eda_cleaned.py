@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the cleaned dataset
-df = pd.read_csv('ChronicKidneyDisease-Prediction/processed_kidney_disease_cleaned.csv')
+df = pd.read_csv('ckd/processed_kidney_disease_cleaned.csv')
 
 # Display basic statistics
 print(df.describe())

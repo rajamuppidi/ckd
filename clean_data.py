@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # Load the dataset
-df = pd.read_csv('ChronicKidneyDisease-Prediction/kidney_disease.csv')
+df = pd.read_csv('ckd/kidney_disease.csv')
 
 # Fix misclassifications
 df['classification'] = df['classification'].str.strip()
@@ -49,7 +49,7 @@ numerical_columns = numerical_columns.drop('classification')
 df[numerical_columns] = scaler.fit_transform(df[numerical_columns])
 
 # Save the processed dataset
-df.to_csv('ChronicKidneyDisease-Prediction/processed_kidney_disease_cleaned.csv', index=False)
+df.to_csv('ckd/processed_kidney_disease_cleaned.csv', index=False)
 
 # Display the processed dataset
 print(df.head())
